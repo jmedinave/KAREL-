@@ -5,14 +5,14 @@ import becker.robots.*;
 /** 
  * Practica de los conceptos de Programacion Estructurada
  * @author Fabian Andres Giraldo */
-public class RobotBase
+public class RobotBase1
 {    
     
        //Declaracion de Variables -- Forma temporal - No es buena practica tener
        //variables estaticas
         public static City objetos;
         public static Robot estudiante;
-        
+       
           public static void turn180(){
           for(int n=1;n<3;n++) estudiante.turnLeft();
           
@@ -21,10 +21,11 @@ public class RobotBase
          for (int n=0;n<3;n++) estudiante.turnLeft();
               
           }
-          public static void move3(){
-          for(int n=0;n<3;n++)estudiante.move(); }
-           public static void move2(){
-          for(int n=0;n<2;n++)estudiante.move(); }
+          public static void move(int m){
+         
+           
+              for(int n=0;n<m;n++)estudiante.move(); }
+          
           
 	public static void main (String[] args){
             //Declarar la creacion de la ciudad
@@ -38,13 +39,13 @@ public class RobotBase
            turn180();
 	estudiante.move();
              turnRight(); 
-             move3();
+             move(3);
              turnRight();
-             move3();
+             move(3);
              turnRight();
-             move3();
+             move(3);
              turnRight();
-             move2();
+             move(2);
              turn180();
           }
         }
